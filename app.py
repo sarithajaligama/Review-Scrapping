@@ -32,8 +32,8 @@ def index():
 
             # ==============================================================================
             webLink = "https://www.flipkart.com"
-            searchString = "honor"  # "fastrack watch"
-            searchString = searchString.replace(' ', '')
+            #searchString = "honor"  # "fastrack watch"
+            searchString = request.form['content'].replace(' ', '')
 
             # ==============================================================================
             URL = webLink + "/search?q=" + searchString
