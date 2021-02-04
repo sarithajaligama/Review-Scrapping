@@ -66,7 +66,7 @@ def index():
             n_records = commentboxes.findAll('div', {'class': "_1AtVbE col-12-12"})[
                         4:-1]  # Get HTML of all comments in each page
 
-            reviews = pd.DataFrame(columns=["Customer_Name", "Rating", "Heading",
+            reviews = pd.DataFrame(columns=["Product_Name", "Customer_Name", "Rating", "Heading",
                                             "Comment", "Date", "Location"])
 
             # reviews = []
@@ -109,7 +109,7 @@ def index():
                     Location = 'None'
 
                 # Creating Dictionary
-                comment_record = {'Customer_Name': Customer_Name, 'Rating': Rating,
+                comment_record = {"Product_Name" : searchString, 'Customer_Name': Customer_Name, 'Rating': Rating,
                                   'Heading': Heading, 'Comment': Comment, 'Date': Date,
                                   'Location': Location}
 
