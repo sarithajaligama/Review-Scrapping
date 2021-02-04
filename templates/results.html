@@ -18,27 +18,36 @@
 
   <div class="table-users">
    <div class="header">Reviews</div>
+      <div>
+          <table>
+              <tr>
+                  <th> Search in Website  : www.flipkart.com </th>
+                  <th> Search for Product : {{ reviews.loc[0, 'Product_Name'] }}</th>
+              </tr>
+          </table>
+      </div>
 
    <table cellspacing="0">
-      <tr>
-         <th>Product_Name</th>
-         <th>Customer_Name</th>
+
+       <tr>
+          <th>Customer_Name</th>
          <th>Rating</th>
          <th>Heading</th>
          <th width="230">Comment</th>
           <th>Date</th>
           <th>Location</th>
       </tr>
+
          {% for i in range(reviews.shape[0]) %}
       <tr>
+
          <td>{{reviews.loc[i,'Product_Name'] }}</td>
-         <td>{{reviews.loc[i,'Customer_Name'] }}</td>
+          <td>{{reviews.loc[i,'Customer_Name'] }}</td>
          <td>{{reviews.loc[i,'Rating'] }}</td>
          <td>{{reviews.loc[i,'Heading'] }}</td>
           <td>{{reviews.loc[i,'Comment'] }}</td>
          <td>{{reviews.loc[i,'Date'] }}</td>
          <td>{{reviews.loc[i,'Location'] }}</td>
-
 
        {% endfor %}
    </table>
